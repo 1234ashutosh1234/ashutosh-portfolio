@@ -21,7 +21,7 @@ export default function IntroAnimation({onfinish}){
     return () => clearTimeout(t);
      }
 
- })
+ }, [index, greetings.length])
   return(
     <AnimatePresence onExitComplete={onfinish}>
       {visible &&(

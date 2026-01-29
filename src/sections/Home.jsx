@@ -6,10 +6,10 @@ import { FaXTwitter, FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa6
 import avator from "../assets/avator.png";
 
 const socials = [
-  { icon: FaXTwitter, label: "X", link: "https://twitter.com/itssarvjeet" },
-  { icon: FaLinkedinIn, label: "LinkedIn", link: "https://www.linkedin.com/in/sarvjeetrajverma/" },
-  { icon: FaGithub, label: "GitHub", link: "https://www.github.com/sarvjeetrajverma" },
-  {icon: FaInstagram, label: "instagram", link: "https://www.instagram.com/sarvjeetrajverma"}
+  { icon: FaXTwitter, label: "X", link: "https://twitter.com/" },
+  { icon: FaLinkedinIn, label: "LinkedIn", link: "https://www.linkedin.com/in//" },
+  { icon: FaGithub, label: "GitHub", link: "https://www.github.com/" },
+  {icon: FaInstagram, label: "instagram", link: "https://www.instagram.com/"}
 ];
 
 const glowVariants = {
@@ -81,7 +81,7 @@ export default function Home() {
               Hello I'm
               <br />
               <span className="text-white font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl lg:whitespace-nowrap">
-                Sarvjeet Raj Verma
+                Ashutosh Raj
               </span>
             </motion.h1>
 

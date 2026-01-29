@@ -15,6 +15,11 @@ import IntroAnimation from "./components/IntroAnimation";
 export default function App(){
   const [introDone , setIntroDone] = useState(false);
 
+  React.useEffect(() => {
+    const timer = setTimeout(() => setIntroDone(true), 7000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       {!introDone && <IntroAnimation onfinish={() => setIntroDone(true)} />}

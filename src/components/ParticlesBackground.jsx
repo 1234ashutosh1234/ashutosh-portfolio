@@ -41,7 +41,7 @@ useEffect(() => {
 
     let particles =[];
     const particlecount=50;
-    const colors =["rgba(255,255,255,0.7"];
+    const colors =["rgba(255,255,255,0.7)"];
 
 function createparticles(){ // create all particles and add new particles
     particles=[];

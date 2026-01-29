@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import OverlayMenu from "./OverlayMenu";
-import logo from "../assets/logo.png"; // Adjust the path as needed
+import logo from "../assets/Astra.png"; // Adjust the path as needed
 import { FiMenu } from "react-icons/fi";
 
 
@@ -67,7 +67,7 @@ useEffect(() => {
         <div className="flex items-center space-x-2">
           <img src={logo} alt="logo" className="w-15 h-15"/>
           <div className="text-2xl font-bold text-white hidden sm:block"> 
-            Sarvjeet
+            Ashutosh Raj  
           </div>
           <div className="block lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
             <button
