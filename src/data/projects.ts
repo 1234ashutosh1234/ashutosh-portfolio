@@ -1,8 +1,9 @@
 export const projects = [
   {
     title: "N100 Financial Intelligence Platform",
+
     description:
-      "AI-powered financial analytics platform with dashboards, company insights, stock analysis, and interactive charts.",
+      "AI-powered financial analytics platform with dashboards, company insights, stock analysis and interactive charts.",
 
     image: "/images/projects/n100.png",
 
@@ -15,31 +16,33 @@ export const projects = [
       "Pandas",
     ],
 
-    github: "https://github.com/1234ashutosh1234",
+    github:
+      "https://github.com/1234ashutosh1234/N100-Financial-Intelligence-Platform",
 
-    demo: "#",
+    demo: "/projects/n100",
   },
 
   {
-    title: "Mutual Fund Analytics Dashboard",
+  title: "Bluestock MF Capstone",
 
-    description:
-      "Comprehensive dashboard for NAV tracking, CAGR calculation, risk analysis and performance visualization.",
+  description:
+    "Comprehensive mutual fund analytics dashboard for NAV tracking, CAGR calculation, risk analysis and performance visualization.",
 
-    image: "/images/projects/mutualfund.png",
+  image: "/images/projects/bluestock/dashboard.png",
 
-    technologies: [
-      "Python",
-      "Pandas",
-      "SQLite",
-      "Streamlit",
-      "Plotly",
-    ],
+  technologies: [
+    "Python",
+    "Pandas",
+    "SQLite",
+    "Streamlit",
+    "Plotly",
+  ],
 
-    github: "https://github.com/1234ashutosh1234",
+  github: "https://github.com/1234ashutosh1234/bluestock-mf-capstone",
 
-    demo: "#",
-  },
+  demo: "/projects/bluestock-mf-capstone",
+},
+
 
   {
     title: "Personal Portfolio Website",
@@ -57,8 +60,9 @@ export const projects = [
       "Framer Motion",
     ],
 
-    github: "https://github.com/1234ashutosh1234",
+    github:
+      "https://github.com/1234ashutosh1234/ashutosh-portfolio",
 
-    demo: "#",
+    demo: "/projects/portfolio",
   },
 ];
