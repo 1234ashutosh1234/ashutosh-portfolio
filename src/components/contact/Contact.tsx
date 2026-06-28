@@ -117,44 +117,77 @@ export default function Contact() {
           {/* Right */}
 
           <motion.form
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: .8 }}
-            viewport={{ once: true }}
-            className="rounded-3xl border border-cyan-500/20 bg-white/5 p-8 backdrop-blur-xl"
-          >
-
+  action="https://formsubmit.co/ashu953442@gmail.com"
+  method="POST"
+  initial={{ opacity: 0, x: 60 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: .8 }}
+  viewport={{ once: true }}
+  className="rounded-3xl border border-cyan-500/20 bg-white/5 p-8 backdrop-blur-xl"
+>
             <input
-              type="text"
-              placeholder="Your Name"
+  type="text"
+  name="name"
+  required
+  placeholder="Your Name"
               className="mb-5 w-full rounded-xl border border-white/10 bg-[#111827] p-4 outline-none focus:border-cyan-400"
             />
 
-            <input
-              type="email"
-              placeholder="Your Email"
+           <input
+  type="email"
+  name="email"
+  required
+  placeholder="Your Email"
               className="mb-5 w-full rounded-xl border border-white/10 bg-[#111827] p-4 outline-none focus:border-cyan-400"
             />
 
-            <input
-              type="text"
-              placeholder="Subject"
+           <input
+  type="text"
+  name="subject"
+  required
+  placeholder="Subject"
               className="mb-5 w-full rounded-xl border border-white/10 bg-[#111827] p-4 outline-none focus:border-cyan-400"
             />
 
-            <textarea
-              rows={6}
-              placeholder="Your Message"
-              className="mb-6 w-full rounded-xl border border-white/10 bg-[#111827] p-4 outline-none focus:border-cyan-400"
-            />
+          <textarea
+  rows={6}
+  name="message"
+  required
+  placeholder="Your Message"
+  className="mb-6 w-full rounded-xl border border-white/10 bg-[#111827] p-4 outline-none focus:border-cyan-400"
+/>
 
-            <button
-              type="submit"
-              className="flex items-center gap-3 rounded-full bg-gradient-to-r from-blue-600 via-cyan-500 to-purple-600 px-8 py-4 font-semibold transition hover:scale-105"
-            >
-              <Send size={18} />
-              Send Message
-            </button>
+<input
+  type="hidden"
+  name="_subject"
+  value="New Portfolio Contact Message"
+/>
+
+<input
+  type="hidden"
+  name="_captcha"
+  value="false"
+/>
+
+<input
+  type="hidden"
+  name="_template"
+  value="table"
+/>
+
+<input
+  type="hidden"
+  name="_next"
+  value="https://ashutoshvats.in"
+/>
+
+<button
+  type="submit"
+  className="flex items-center gap-3 rounded-full bg-gradient-to-r from-blue-600 via-cyan-500 to-purple-600 px-8 py-4 font-semibold transition hover:scale-105"
+>
+  <Send size={18} />
+  Send Message
+</button>
 
           </motion.form>
 
