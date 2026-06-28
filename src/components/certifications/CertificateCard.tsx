@@ -49,10 +49,11 @@ export default function CertificateCard({
         </p>
 
         <a
-          href={link}
-          target="_blank"
-          className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 font-semibold text-white"
-        >
+  href={link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 font-semibold text-white transition hover:scale-105"
+>
           <ExternalLink size={18} />
           View Certificate
         </a>
