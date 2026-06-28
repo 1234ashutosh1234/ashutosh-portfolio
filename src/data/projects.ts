@@ -5,7 +5,7 @@ export const projects = [
     description:
       "AI-powered financial analytics platform with dashboards, company insights, stock analysis and interactive charts.",
 
-    image: "/images/projects/n100.png",
+   image: "/images/projects/n100/dashboard.png",
 
     technologies: [
       "Next.js",
@@ -50,7 +50,7 @@ export const projects = [
     description:
       "Modern responsive portfolio developed using Next.js, React, TypeScript and Tailwind CSS with premium animations.",
 
-    image: "/images/projects/portfolio.png",
+    image: "/images/projects/portfolio/hero.png",
 
     technologies: [
       "Next.js",

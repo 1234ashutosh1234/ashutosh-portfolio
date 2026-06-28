@@ -33,13 +33,12 @@ export default function ProjectCard({
       <Link href={demo}>
         <div className="relative h-60 overflow-hidden cursor-pointer">
           <Image
-            src={image}
-            alt={title}
-            fill
-            priority
-            className="object-cover transition duration-700 group-hover:scale-110"
-            sizes="(max-width:768px)100vw,(max-width:1200px)50vw,33vw"
-          />
+  src={image}
+  alt={title}
+  fill
+  className="object-cover"
+  sizes="(max-width:768px)100vw,(max-width:1200px)50vw,33vw"
+/>
 
           <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-transparent" />
         </div>
