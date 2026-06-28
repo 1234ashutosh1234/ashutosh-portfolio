@@ -81,13 +81,29 @@ export default function ProjectCard({
             GitHub
           </a>
 
-          <Link
-            href={demo}
-            className="flex items-center gap-2 rounded-full border border-cyan-400 px-6 py-3 text-white transition hover:bg-cyan-500/20"
-          >
-            <FaExternalLinkAlt size={18} />
-            View Project
-          </Link>
+         <Link
+  href={
+    title === "N100 Financial Intelligence Platform"
+      ? "/projects/n100"
+      : title === "Bluestock MF Capstone"
+      ? "/projects/bluestock-mf-capstone"
+      : "/projects/portfolio"
+  }
+  className="flex items-center gap-2 rounded-full border border-cyan-400 px-6 py-3 text-white transition hover:bg-cyan-500/20"
+>
+  <FaExternalLinkAlt size={18} />
+  View Project
+</Link>
+
+<a
+  href={demo}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 rounded-full border border-green-500 px-6 py-3 text-green-400 transition hover:bg-green-500/20"
+>
+  <FaExternalLinkAlt size={18} />
+  Live Demo
+</a>
 
         </div>
 

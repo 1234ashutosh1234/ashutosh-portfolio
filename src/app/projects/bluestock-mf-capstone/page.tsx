@@ -12,7 +12,7 @@ export default function BluestockProject() {
         subtitle="A comprehensive Mutual Fund Analytics Dashboard built using Python, Streamlit, SQLite and Plotly for NAV tracking, CAGR analysis, risk assessment and performance visualization."
         image="/images/projects/bluestock/dashboard.png"
         github="https://github.com/1234ashutosh1234/bluestock-mf-capstone"
-        demo="#"
+        demo="https://bluestock-mf-capstone-3wfcut3qcpyvjkuobism2j.streamlit.app/"
       />
 
       {/* Project Overview */}

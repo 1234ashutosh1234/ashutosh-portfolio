@@ -12,7 +12,7 @@ export default function N100Project() {
         subtitle="An AI-powered financial intelligence platform for analyzing Nifty 100 companies with interactive dashboards, financial ratios, sector insights, stock analysis and data visualization."
         image="/images/projects/n100/dashboard.png"
         github="https://github.com/1234ashutosh1234/N100-Financial-Intelligence-Platform"
-        demo="#"
+        demo="https://n100-financial-intelligence-platform-hhchh7t8mwhbhdwwj4bj2p.streamlit.app/"
       />
 
       <section className="mx-auto max-w-7xl px-6 py-20">
