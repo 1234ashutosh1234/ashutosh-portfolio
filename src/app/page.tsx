@@ -12,6 +12,7 @@ import Contact from "../components/contact/Contact";
 import Footer from "../components/layout/Footer";
 import ScrollProgress from "../components/layout/ScrollProgress";
 import BackToTop from "../components/layout/BackToTop";
+import GithubContributions from "../components/GitHubCalendar";
 
 export default function Home() {
   return (
@@ -35,6 +36,8 @@ export default function Home() {
         <Services />
 
         <Projects />
+
+        <GithubContributions />
 
         <Resume />
 

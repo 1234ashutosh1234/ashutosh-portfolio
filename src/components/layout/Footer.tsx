@@ -101,6 +101,10 @@ export default function Footer() {
           </p>
 
           <p className="mt-3 text-sm">
+            <img
+src="https://komarev.com/ghpvc/?username=1234ashutosh1234&style=for-the-badge&color=blue"
+/>
+
             © {new Date().getFullYear()} Ashutosh Raj. All Rights Reserved.
           </p>
 
