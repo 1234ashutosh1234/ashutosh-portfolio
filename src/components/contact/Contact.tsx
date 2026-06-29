@@ -36,21 +36,23 @@ const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
   try {
     if (!form.current) return;
 
-    await emailjs.sendForm(
-      "service_zxhi7ga",
-      "template_6vsgn21",
-      form.current,
-      "6SYwAfiQTfe5f_30w"
-    );
+   await emailjs.sendForm(
+  "service_7zdwi1l",
+  "template_6vsgn21",
+  form.current,
+  "6SYwAfiQTfe5f_30w"
+);
 
     setSuccess("✅ Message sent successfully!");
     form.current.reset();
-  } catch (err) {
-    console.error(err);
-    setError("❌ Failed to send message.");
-  } finally {
-    setLoading(false);
-  }
+ } catch (err: any) {
+  console.log(err);
+
+  alert(JSON.stringify(err));
+
+  setError(err.text || err.message || "Failed");
+}
+
 };
 
 
