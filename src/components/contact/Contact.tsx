@@ -151,15 +151,12 @@ const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
           </motion.div>
 
           {/* Right */}
-
-          <motion.form
+<motion.form
   ref={form}
   onSubmit={sendEmail}
-  action="https://formsubmit.co/ashu953442@gmail.com"
-  method="POST"
   initial={{ opacity: 0, x: 60 }}
   whileInView={{ opacity: 1, x: 0 }}
-  transition={{ duration: .8 }}
+  transition={{ duration: 0.8 }}
   viewport={{ once: true }}
   className="rounded-3xl border border-cyan-500/20 bg-white/5 p-8 backdrop-blur-xl"
 >
