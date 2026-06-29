@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 import {
 
@@ -18,6 +20,40 @@ import {
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 export default function Contact() {
+  const form = useRef<HTMLFormElement>(null);
+
+const [loading, setLoading] = useState(false);
+const [success, setSuccess] = useState("");
+const [error, setError] = useState("");
+
+const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  setLoading(true);
+  setSuccess("");
+  setError("");
+
+  try {
+    if (!form.current) return;
+
+    await emailjs.sendForm(
+      "service_zxhi7ga",
+      "template_6vsgn21",
+      form.current,
+      "6SYwAfiQTfe5f_30w"
+    );
+
+    setSuccess("✅ Message sent successfully!");
+    form.current.reset();
+  } catch (err) {
+    console.error(err);
+    setError("❌ Failed to send message.");
+  } finally {
+    setLoading(false);
+  }
+};
+
+
   return (
     <section
       id="contact"
@@ -117,6 +153,8 @@ export default function Contact() {
           {/* Right */}
 
           <motion.form
+  ref={form}
+  onSubmit={sendEmail}
   action="https://formsubmit.co/ashu953442@gmail.com"
   method="POST"
   initial={{ opacity: 0, x: 60 }}
@@ -125,31 +163,30 @@ export default function Contact() {
   viewport={{ once: true }}
   className="rounded-3xl border border-cyan-500/20 bg-white/5 p-8 backdrop-blur-xl"
 >
-            <input
+  
+  <input
   type="text"
-  name="name"
+  name="from_name"
   required
   placeholder="Your Name"
-              className="mb-5 w-full rounded-xl border border-white/10 bg-[#111827] p-4 outline-none focus:border-cyan-400"
-            />
-
-           <input
+  className="mb-5 w-full rounded-xl border border-white/10 bg-[#111827] p-4 outline-none focus:border-cyan-400"
+/>
+         <input
   type="email"
-  name="email"
+  name="from_email"
   required
   placeholder="Your Email"
-              className="mb-5 w-full rounded-xl border border-white/10 bg-[#111827] p-4 outline-none focus:border-cyan-400"
-            />
+  className="mb-5 w-full rounded-xl border border-white/10 bg-[#111827] p-4 outline-none focus:border-cyan-400"
+/>
 
            <input
   type="text"
   name="subject"
   required
   placeholder="Subject"
-              className="mb-5 w-full rounded-xl border border-white/10 bg-[#111827] p-4 outline-none focus:border-cyan-400"
-            />
-
-          <textarea
+  className="mb-5 w-full rounded-xl border border-white/10 bg-[#111827] p-4 outline-none focus:border-cyan-400"
+/>
+<textarea
   rows={6}
   name="message"
   required
@@ -183,11 +220,25 @@ export default function Contact() {
 
 <button
   type="submit"
-  className="flex items-center gap-3 rounded-full bg-gradient-to-r from-blue-600 via-cyan-500 to-purple-600 px-8 py-4 font-semibold transition hover:scale-105"
+  disabled={loading}
+  className="flex items-center gap-3 rounded-full bg-gradient-to-r from-blue-600 via-cyan-500 to-purple-600 px-8 py-4 font-semibold transition hover:scale-105 disabled:opacity-60"
 >
   <Send size={18} />
-  Send Message
+
+  {loading ? "Sending..." : "Send Message"}
 </button>
+
+{success && (
+  <p className="mt-5 rounded-xl bg-green-500/20 p-4 text-green-400">
+    {success}
+  </p>
+)}
+
+{error && (
+  <p className="mt-5 rounded-xl bg-red-500/20 p-4 text-red-400">
+    {error}
+  </p>
+)}
 
           </motion.form>
 
