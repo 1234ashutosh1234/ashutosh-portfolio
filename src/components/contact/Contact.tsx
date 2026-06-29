@@ -29,30 +29,41 @@ const [error, setError] = useState("");
 const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
+  if (!form.current) return;
+
   setLoading(true);
   setSuccess("");
   setError("");
 
   try {
-    if (!form.current) return;
+    await emailjs.sendForm(
+      "service_7zdwi1l",
+      "template_mq70gb9",
+      form.current,
+      "6SYwAfiQTfe5f_30w"
+    );
 
-   await emailjs.sendForm(
-  "service_7zdwi1l",
-  "template_6vsgn21",
-  form.current,
-  "6SYwAfiQTfe5f_30w"
-);
+    form.current.reset();
 
     setSuccess("✅ Message sent successfully!");
-    form.current.reset();
- } catch (err: any) {
-  console.log(err);
 
-  alert(JSON.stringify(err));
+    setTimeout(() => {
+      setSuccess("");
+    }, 4000);
 
-  setError(err.text || err.message || "Failed");
-}
+  } catch (err: any) {
+    console.error(err);
 
+    setError(err?.text || "❌ Failed to send message.");
+
+    setTimeout(() => {
+      setError("");
+    }, 4000);
+
+  } finally {
+    // This ALWAYS runs, whether success or error
+    setLoading(false);
+  }
 };
 
 
