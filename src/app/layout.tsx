@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ChatProvider } from "@/context/ChatContext";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Ashutosh Raj | AI & Data Analytics Portfolio",
   description:
     "Portfolio of Ashutosh Raj - Computer Science Engineering student specializing in Artificial Intelligence, Data Analytics, Machine Learning, Business Intelligence and Full Stack Development.",
@@ -30,7 +31,6 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: {
@@ -38,7 +38,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ChatProvider>
+          {children}
+        </ChatProvider>
+      </body>
     </html>
   );
 }

@@ -71,9 +71,9 @@ export default function About() {
             viewport={{ once: true }}
           >
             <h3 className="text-4xl font-bold">
-              Hi, I'm
+              Hi, I&apos;m
               <span className="text-cyan-400">
-                {" "}Ashutosh Raj
+                {" "}Ashutosh&apos;s
               </span>
             </h3>
 

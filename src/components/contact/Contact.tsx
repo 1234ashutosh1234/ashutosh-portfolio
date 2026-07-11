@@ -51,10 +51,18 @@ const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
       setSuccess("");
     }, 4000);
 
-  } catch (err: any) {
+  }  catch (err: unknown) { 
     console.error(err);
 
-    setError(err?.text || "❌ Failed to send message.");
+if (
+  err &&
+  typeof err === "object" &&
+  "text" in err
+) {
+  setError(String((err as { text: string }).text));
+} else {
+  setError("❌ Failed to send message.");
+}
 
     setTimeout(() => {
       setError("");
@@ -92,7 +100,7 @@ const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
-            I'm always open to internship opportunities, collaborations,
+            I&apos;m always open to internship opportunities, collaborations,
             and exciting projects. Feel free to reach out!
           </p>
         </motion.div>

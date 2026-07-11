@@ -13,6 +13,7 @@ import Footer from "../components/layout/Footer";
 import ScrollProgress from "../components/layout/ScrollProgress";
 import BackToTop from "../components/layout/BackToTop";
 import GithubContributions from "../components/GitHubCalendar";
+import FullScreenAI from "@/components/ai/FullScreenAI";
 
 export default function Home() {
   return (
@@ -50,6 +51,8 @@ export default function Home() {
       <Footer />
 
       <BackToTop />
+
+      <FullScreenAI />
     </>
   );
 }

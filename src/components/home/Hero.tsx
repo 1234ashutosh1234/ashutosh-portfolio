@@ -28,7 +28,7 @@ export default function Hero() {
 </p>
 
        <h1 className="text-5xl md:text-6xl xl:text-7xl font-extrabold leading-tight tracking-tight">
-           Hello, I'm
+           Hello, I&apos;m
 
           <span className="block mt-2 bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500 bg-clip-text text-transparent">
   Ashutosh Raj
@@ -43,7 +43,7 @@ export default function Hero() {
 
 <div className="mt-8 max-w-xl rounded-3xl border border-cyan-500/20 bg-white/5 p-6 backdrop-blur-xl shadow-xl">
   <p className="text-lg leading-8 text-gray-300">
-  I'm <span className="font-semibold text-cyan-400">Ashutosh Raj</span>,
+ I&apos;m <span className="font-semibold text-cyan-400">Ashutosh&apos;s</span>,
   a Computer Science Engineering student passionate about
   <span className="text-blue-400"> Artificial Intelligence</span>,
   <span className="text-purple-400"> Machine Learning</span>,
